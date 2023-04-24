@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KPI App</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+  </head>
+  <body>
+<!-- main container -->
+ <div class = "bg-gray-100 min-h-screen">
+
+  <!--Sidebars  -->
+  <div class="flex">
+    <div class="fixed w-20 h-screen p-2 bg-white border-r[1px] flex flex-col justify-between   ">
+
+        <div class="flex flex-col items-center">
+            <a href="">
+                <div class=" p-2 text-white rounded-xl inline-block  " style="background-color:#d1ecf1;" >
+                    <!-- <i class='bx bx-stats' style="font-size:40px;"></i>  -->
+                    <i class='bx bxs-circle alert-info'  style="font-size:40px;"></i>
+                </div>
+            </a><l class="font-bold inline-block mt-4" >KPI</l>
+        
+            <span class="border-b-[1px] border-gray-200 w-full p-2"> </span>
+
+            <a href="panel.html">
+                
+                            
+                    <div class="hover-text font-bold">     
+                   <div class="bg-gray-100 hover:bg-gray-200 p-2 cursor-pointer my-4 rounded-xl inline-block  ">
+                       
+                        <i class='bx bxs-home-circle text-xl'></i><span class="tooltip-text" id="right">Home</span>
+                       
+               </div>  </div>
+            </a>    
+
+            <a href=""> 
+                    <div class="hover-text font-bold"> 
+                    <div class="bg-gray-100 hover:bg-gray-200 p-2 cursor-pointer my-4 rounded-xl inline-block  ">
+                             <i class='bx bxs-dashboard text-xl' ></i> <span class="tooltip-text" id="right">Inactive fn</span>
+                    </div> </div>
+            </a>
+              
+            <a href="">
+                    <div class="hover-text font-bold        ">    
+                <span class="tooltip-text" id="right"> Export data</span>
+                    <div class="bg-gray-100 hover:bg-gray-200 p-2 cursor-pointer my-4 rounded-xl inline-block  ">
+                          <i class='bx bxs-data text-xl' ></i>
+                    </div>
+            </a></div>
+
+
+        </div>
+    </div>
+    <div class="ml-20  w-full"></div>
+</div>
+<!--  Sidebars-->
+
+
+
+
+
+        <div class="ml-20  bg-gray-100 min-h-screen">
+            <div class="flex justify-between  px-4 pt-4 ">
+                <h2 class="font-bold">Table</h2>
+                <div class="flex justify-between relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Click to logout"><h2 class="bg-white hover:bg-blue-200 p-2 cursor-pointer my-2 rounded-xl inline-block  text-green-800 font-bold ">
+                    <a href="index.html">
+                    Abhishek  </h2>&nbsp;
+                    </a>
+                    <div class="relative">
+                        <img src="/bxs-user-circle.svg" alt="baby with headphones" class="w-12 h-12 rounded-full object-cover">
+                        <span class="absolute h-3 w-3 rounded-full bg-green-600 border-2 border-white-500 top-5 left-0" />
+                     </div>
+                </div>
+            </div>
+            <!-- <i class='bx bxs-user-circle'></i> -->
+
+            <div class="p-4">
+                <div class=" w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto">
+                    <div class="my-2 p-2 grid md:grid-cols-4  sm:grid-cols-3 font-bold grid-cols-2 items-center justify-between cursor-pointer">
+                        <span>Name</span>
+                        <span class="hidden md:grid">Description</span>
+                        <span class="hidden md:grid">Date</span>
+                        <span class=" text-center">Action</span>
+                    </div>
+                    <ul>
+<!-- first -->
+                        <li class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"  >
+                            <div  class="flex items-center">
+                                <div  class="bg-sky-100 p-3 rounded-lg">
+
+                                </div>
+                                <p class="pl-4">1.1.1</p>
+                            </div>
+                            <p  class="hidden md:flex">Main indication</p>
+                            <p  class="hidden md:flex">12-04-2023</p>
+                            <div class="flex justify-around items-center  " >
+                                <a href="" class="relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Edit this ">
+                                <!-- <p class=''>edit &nbsp;&nbsp;<i class='bx bxs-edit'></i></p> -->
+                                <i class='bx bx-dots-vertical-rounded '></i>
+                            </a>
+      
+                            </div>
+                        </li>
+
+
+
+
+                        <li class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"  >
+                                <div  class="flex items-center">
+                                    <div  class="bg-sky-100 p-3 rounded-lg">
+    
+                                    </div>
+                                    <p class="pl-4">1.1.1</p>
+                                </div>
+                                <p  class="hidden md:flex">Main indication</p>
+                                <p  class="hidden md:flex">12-04-2023</p>
+                                <div class="flex justify-around items-center  " >
+                                    <a href="" class="relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Edit this ">
+                                    <!-- <p class=''>edit &nbsp;&nbsp;<i class='bx bxs-edit'></i></p> -->
+                                    <i class='bx bx-dots-vertical-rounded '></i>
+                                </a>
+          
+                                </div>
+                            </li>
+
+
+                            <li class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"  >
+                                    <div  class="flex items-center">
+                                        <div  class="bg-sky-100 p-3 rounded-lg">
+        
+                                        </div>
+                                        <p class="pl-4">1.1.1</p>
+                                    </div>
+                                    <p  class="hidden md:flex">Main indication</p>
+                                    <p  class="hidden md:flex">12-04-2023</p>
+                                    <div class="flex justify-around items-center  " >
+                                        <a href="" class="relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Edit this ">
+                                        <!-- <p class=''>edit &nbsp;&nbsp;<i class='bx bxs-edit'></i></p> -->
+                                        <i class='bx bx-dots-vertical-rounded '></i>
+                                    </a>
+              
+                                    </div>
+                                </li>
+
+                                <li class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"  >
+                                        <div  class="flex items-center">
+                                            <div  class="bg-sky-100 p-3 rounded-lg">
+            
+                                            </div>
+                                            <p class="pl-4">1.1.1</p>
+                                        </div>
+                                        <p  class="hidden md:flex">Main indication</p>
+                                        <p  class="hidden md:flex">12-04-2023</p>
+                                        <div class="flex justify-around items-center  " >
+                                            <a href="" class="relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Edit this ">
+                                            <!-- <p class=''>edit &nbsp;&nbsp;<i class='bx bxs-edit'></i></p> -->
+                                            <i class='bx bx-dots-vertical-rounded '></i>
+                                        </a>
+                  
+                                        </div>
+                                    </li>
+
+                                    <li class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"  >
+                                            <div  class="flex items-center">
+                                                <div  class="bg-sky-100 p-3 rounded-lg">
+                
+                                                </div>
+                                                <p class="pl-4">1.1.1</p>
+                                            </div>
+                                            <p  class="hidden md:flex">Main indication</p>
+                                            <p  class="hidden md:flex">12-04-2023</p>
+                                            <div class="flex justify-around items-center  " >
+                                                <a href="" class="relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Edit this ">
+                                                <!-- <p class=''>edit &nbsp;&nbsp;<i class='bx bxs-edit'></i></p> -->
+                                                <i class='bx bx-dots-vertical-rounded '></i>
+                                            </a>
+                      
+                                            </div>
+                                        </li>
+
+                                        <li class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"  >
+                                                <div  class="flex items-center">
+                                                    <div  class="bg-sky-100 p-3 rounded-lg">
+                    
+                                                    </div>
+                                                    <p class="pl-4">1.1.1</p>
+                                                </div>
+                                                <p  class="hidden md:flex">Main indication</p>
+                                                <p  class="hidden md:flex">12-04-2023</p>
+                                                <div class="flex justify-around items-center  " >
+                                                    <a href="" class="relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Edit this ">
+                                                    <!-- <p class=''>edit &nbsp;&nbsp;<i class='bx bxs-edit'></i></p> -->
+                                                    <i class='bx bx-dots-vertical-rounded '></i>
+                                                </a>
+                          
+                                                </div>
+                                            </li> 
+
+                        <!-- first -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+  
+<!-- main container End-->    
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/8fd20d9b41.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script> -->
+<script src="./static/js/chart.js"></script>
+</body>
+</html>
